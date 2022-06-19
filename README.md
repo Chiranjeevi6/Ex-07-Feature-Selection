@@ -75,7 +75,7 @@ print("RMSE: " + str(round(sqrt(mean_squared_error(y,y_pred)),2)))
 
 print("R_squared: " + str(round(r2_score(y,y_pred),2)))
 
-Filter Features by Correlation
+# Filter Features by Correlation
 
 import seaborn as sn
 import matplotlib.pyplot as plt
@@ -110,7 +110,7 @@ features = abs(boston.corr()["MEDV"][abs(boston.corr()["MEDV"])>val].drop('MEDV'
     
     print("R_squared: " + str(round(r2_score(y,y_pred),2)))
 
-Feature Selection Using a Wrapper
+# Feature Selection Using a Wrapper
 
 boston = pd.DataFrame(boston_data.data, columns=boston_data.feature_names)
 
